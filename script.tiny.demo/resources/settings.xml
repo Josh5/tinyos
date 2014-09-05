@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+	<category label="Network Settings">
+		<setting label="Network Settings" type="lsep"/>
+		<setting label="Connect to Wifi Network" type="action" option="close" action="RunScript(script.linux.nm)"/>
+	</category>
+	<category label="System Update">
+             <setting label="Current Firmware Version"    id="cVersion" type="text" default="DEMO" visible="true" />
+             <setting label="Downloaded Version" id="dVersion" type="text" default="0.0.0" visible="false" />
+
+             <setting label="101" id="autoUpdate" type="bool" default="false"/>
+             <setting label="102" type="action" option="close" action="RunScript($CWD/update.py,0)" />
+             <setting label="105" type="action" option="close" action="RunScript($CWD/update.py,4)" />
+             <setting label="103" type="action" option="close" action="RunScript($CWD/update.py,2)" />
+             <setting label="104" type="action" option="close" action="RunScript($CWD/update.py,3)" />
+             <setting label="TinyOS Account Username" id="username" type="text" default="" visible="true" />
+             <setting label="TinyOS Account Password" id="password" type="text" default="" visible="true" />
+             <setting label="Your Unique ID" id="otaid" type="text" default="" visible="true" />
+             <setting label="Device" id="device" type="text" default="" visible="false" />
+	</category>
+</settings>

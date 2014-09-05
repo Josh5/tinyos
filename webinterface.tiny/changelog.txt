@@ -1,0 +1,21 @@
+[B][COLOR=FF56ADDA]v0.1.6 - Release Date 09/08/2014[/COLOR][/B]
+• Update for Gotham support.
+
+[B][COLOR=FF56ADDA]v0.1.5:[/COLOR][/B]
+• Fixed: Bug that caused Maraschino to not open host name was used.
+
+[B][COLOR=FF56ADDA]v0.1.4:[/COLOR][/B]
+• Fixed: Bug that caused Maraschino to not open when a port number was entered.
+
+[B][COLOR=FF56ADDA]v0.1.3:[/COLOR][/B]
+• Added: Added support for older versions of Marachino Plugin.
+
+[B][COLOR=FF56ADDA]v0.1.2:[/COLOR][/B]
+• Fixed: Added layout varying screen resolutions.
+
+[B][COLOR=FF56ADDA]v0.1.1:[/COLOR][/B]
+• Added: Web Remote
+• Added: External Links
+• Added: Auto-detect XBMC URL
+• Fixed: Minor bug fixes.
+
