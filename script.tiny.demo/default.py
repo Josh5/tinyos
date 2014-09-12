@@ -18,11 +18,9 @@
 #
 
 import utils
-from services.changesettings import writeSetting
 
 
 def main():
-    writeSetting()
     utils.ADDON.openSettings() 
 
 

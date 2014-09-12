@@ -25,6 +25,10 @@ from services.firstrun import firstrun
 firstrun_thread = firstrun()     
 firstrun_thread.onStart()
 
+from services.firstrun import start
+start_thread = start()     
+start_thread.onStart()
+
 utils.log("Update Service Starting")
 
 

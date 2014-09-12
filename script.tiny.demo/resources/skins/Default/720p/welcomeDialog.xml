@@ -1,9 +1,9 @@
 <window>
-	<defaultcontrol always="true">10</defaultcontrol>
+	<defaultcontrol always="true">112</defaultcontrol>
 	<coordinates>
 		<system>1</system>
 		<posx>335</posx>
-		<posy>200</posy>
+		<posy>100</posy>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -11,7 +11,7 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>610</width>
-			<height>440</height>
+			<height>500</height>
 			<texture border="40">DialogBack.png</texture>
 		</control>
 		<control type="image">
@@ -29,7 +29,7 @@
 			<width>530</width>
 			<height>30</height>
 			<font>font13_title</font>
-		    <label>Welcome to TinyOS</label>
+		    <label>[B]Welcome to TinyOS[/B]</label>
 			<align>center</align>
 			<aligny>center</aligny>
 			<textcolor>selected</textcolor>
@@ -40,14 +40,14 @@
 			  <posx>80</posx>
 			  <posy>60</posy>
 			  <width>450</width>
-			  <height>300</height>			  
+			  <height>340</height>			  
 			  <font>font13</font>			  
-			  <label>TinyOS is an Embedded Linux firmware for the ARM TV boxes. Please consider supporting further development by donating at [COLOR=selected]http://tinyhtpc.co.nz[/COLOR]. [CR]To Unlock the full version, sign up for a premium membership on our website and enter in this devices unique ID.[CR] You can find your unique ID under "Programs -> TinyOS Config -> Network Settings"[CR][CR]Press OK to continue using the TinyOS DEMO.</label>
+			  <label>                    [B][I]Embedded Linux on ARM[/I][/B].[CR][CR]Please consider supporting further development by donating at [COLOR=selected]http://tinyhtpc.co.nz[/COLOR]. [CR][CR]To Unlock the full version, sign up for a premium membership on our website and enter in this devices unique ID.[CR][CR]You can find your unique ID under [B][I]"Programs -> TinyOS Config -> Network Settings"[/I][/B][CR][CR][CR]    Press [B]OK[/B] to continue using the [B]TinyOS[/B] DEMO.</label>
 		</control>
-		<control type="button" id="10">
+		<control type="button" id="112">
 			<description>OK button</description>
 			<posx>205</posx>
-			<posy>360</posy>
+			<posy>420</posy>
 			<width>200</width>
 			<height>40</height>
 			<label>186</label>
@@ -55,6 +55,7 @@
 			<textcolor>white</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<onclick>PreviousMenu</onclick>
+			<onclick>ReplaceWindow(home)</onclick>
 			<align>center</align>
 			<onleft>10</onleft>
 			<onright>10</onright>

@@ -21,12 +21,12 @@ src=None
 def EXECUTE():
         dialog = xbmcgui.Dialog()      
         dp = xbmcgui.DialogProgress()
+        dlg = xbmcgui.WindowXMLDialog('welcomeDialog.xml',ROOTDIR)
+        dlg.doModal()
 	
 	#Execute XBMC built-in functions
         xbmc.executebuiltin('UpdateAddonRepos')
         xbmc.executebuiltin('UpdateLocalAddons')
-        self.dlg = xbmcgui.WindowXMLDialog('welcomeDialog.xml',ROOTDIR)
-        self.dlg.doModal()
 
 def ensure_dir(f):
     print "Checking for location: "+f

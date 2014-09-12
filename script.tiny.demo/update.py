@@ -28,6 +28,14 @@ import utils
 import shutil
 import cookielib
 
+import fcntl, socket, struct
+
+
+def getHwAddr(ifname):
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    info = fcntl.ioctl(s.fileno(), 0x8927,  struct.pack('256s', ifname[:15]))
+    return ''.join(['%02x:' % ord(char) for char in info[18:24]])[:-1].replace(":", "")
+
 
 def checkForUpdate(silent = 1):
 
@@ -39,13 +47,17 @@ def checkForUpdate(silent = 1):
         try:
             username   = utils.getSetting('username')
             password   = utils.getSetting('password')
-            url        = 'http://tinyhtpc.co.nz/downloads/8726MX-list.php'
+            tinyosid   = getHwAddr('wlan0')
+            tinyoshw   = utils.getSetting('device')
+            url        = 'http://tinyhtpc.co.nz/downloads/tinyos-list.php'
             cj         = cookielib.CookieJar()
             opener     = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
             login_data = urllib.urlencode({'username' : username, 'password' : password})
             opener.open(url, login_data)
-            resp       = opener.open(url)
+            post_id    = urllib.urlencode({'tinyosid' : tinyosid, 'tinyoshw' : tinyoshw})
+            resp       = opener.open(url, post_id)
             response   = resp.read()
+
             #print response
         except:
             return []
@@ -53,6 +65,8 @@ def checkForUpdate(silent = 1):
         return
         
     utils.saveOta()
+    utils.saveHW()
+    utils.saveID()
     silent = int(silent) == 1
 
     if silent and utils.getSetting('autoUpdate') == 'false':
@@ -103,12 +117,15 @@ def getResponse():
     try:
         username   = utils.getSetting('username')
         password   = utils.getSetting('password')
-        url        = 'http://tinyhtpc.co.nz/downloads/8726MX-latest.php'
+        tinyosid   = getHwAddr('wlan0')
+        tinyoshw   = utils.getSetting('device')
+        url        = 'http://tinyhtpc.co.nz/downloads/tinyos-latest.php'
         cj         = cookielib.CookieJar()
         opener     = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
         login_data = urllib.urlencode({'username' : username, 'password' : password})
         opener.open(url, login_data)
-        resp       = opener.open(url)
+        post_id    = urllib.urlencode({'tinyosid' : tinyosid, 'tinyoshw' : tinyoshw})
+        resp       = opener.open(url, post_id)
         response   = resp.read()
         #print response
     except:

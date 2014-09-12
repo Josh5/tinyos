@@ -22,9 +22,12 @@ import xbmcaddon
 import xbmcgui
 import os
 
+import fcntl, socket, struct
+
 ID    = 'script.tiny.demo'
 ADDON = xbmcaddon.Addon(ID)
 OTAORIG = "/usr/share/xbmc/system/ota_version"
+FWHW = "/usr/share/xbmc/system/fw_hw"
 #PATCHID = 'os.linux.tiny'
 #PATCH = xbmcaddon.Addon(PATCHID)
 #OTAPATH  = xbmc.translatePath( "special://profile/addon_data/%s/" PATCH )
@@ -92,9 +95,24 @@ def setSetting(setting, value):
 
 
 def saveOta():
-    f = open(OTAORIG).read()
+    f = open(OTAORIG).read().rstrip('\n')
     #f = PATCHVERSION
     xbmcaddon.Addon(id = ID).setSetting('cVersion', f)
+
+
+def getHwAddr(ifname):
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    info = fcntl.ioctl(s.fileno(), 0x8927,  struct.pack('256s', ifname[:15]))
+    return ''.join(['%02x:' % ord(char) for char in info[18:24]])[:-1].replace(":", "")
+
+def saveID():
+    f = getHwAddr('wlan0')
+    xbmcaddon.Addon(id = ID).setSetting('otaid', f)
+
+
+def saveHW():
+    f = open(FWHW).read().rstrip('\n')
+    xbmcaddon.Addon(id = ID).setSetting('device', f)
 
 
 def getSetting(setting):
