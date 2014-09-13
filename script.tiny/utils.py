@@ -24,7 +24,7 @@ import os
 
 import fcntl, socket, struct
 
-ID    = 'script.tiny.demo'
+ID    = 'script.tiny'
 ADDON = xbmcaddon.Addon(ID)
 OTAORIG = "/usr/share/xbmc/system/ota_version"
 FWHW = "/usr/share/xbmc/system/fw_hw"

@@ -8,7 +8,7 @@ from xbmcaddon import Addon
 import subprocess
 import time
 
-__addonID__ = "script.tiny.demo"
+__addonID__ = "script.tiny"
 ADDON     = Addon( __addonID__ )
 ADDON_DATA  = xbmc.translatePath( "special://profile/addon_data/%s/" % __addonID__ )
 ADDON_DIR = ADDON.getAddonInfo( "path" )
