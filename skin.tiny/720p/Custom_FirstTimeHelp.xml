@@ -254,7 +254,7 @@
 					<posy>50</posy>
 					<width>600</width>
 					<height>400</height>
-					<label>Not sure what add-ons are right for you? That's fine, just download one of our Add-on Packs. The [B]Add-on Pack Installer[/B] allows you to download a group of pre-configured add-ons so you're up and running in no time at all![CR][CR]What if you have a add-on combination that you wish to share?[CR]Awesome![CR]Using our Add-on Pack creator, you are able to easily create your own Add-on Pack. Then all you have to do is upload it onto the internet (ie. Dropbox), PM us the link in our forum and we'll add it to our repostitory. </label>
+					<label>Not sure what add-ons are right for you? That's fine, just download one of our Add-on Packs. The [B]Add-on Pack Installer[/B] allows you to download a group of pre-configured add-ons so you're up and running in no time at all![CR][CR]What if you have an add-on combination that you wish to share?[CR]Awesome![CR]Using our Add-on Pack creator, you are able to easily create your own Add-on Pack. Then all you have to do is upload it onto the internet (ie. Dropbox), PM us the link in our forum and we'll add it to our repository. </label>
 						<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
