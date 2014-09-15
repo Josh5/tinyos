@@ -1,3 +1,7 @@
+[B][COLOR=FF56ADDA]v2.1.0 - Release Date 14/9/2014[/COLOR][/B]
+• Update for public release of TinyOS.
+• Add unlock helper to DEMO.
+
 [B][COLOR=FF56ADDA]v2.0.0 - Release Date 02/7/2014[/COLOR][/B]
 • Merge changes from Nessus TLBB skin v3.0.1.
 

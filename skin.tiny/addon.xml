@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.tiny" version="2.0.0" name="Tiny Home Theatre Box" provider-name="TinyHTPC">
+<addon id="skin.tiny" version="2.1.0" name="Tiny Home Theatre Box" provider-name="TinyHTPC">
   <requires>
 		<import addon="xbmc.gui" version="5.0.1"/>
 		<import addon="service.skin.widgets" version="0.0.29"/>

@@ -1057,7 +1057,7 @@ msgstr ""
 
 #First time helper screens
 msgctxt "#31421"
-msgid "Thank you for purchasing a [B] [COLOR=selected]Tiny Home Theatre PC[/COLOR][/B].[CR][CR]This one time seen [B]"First Use Help Guide"[/B], will guide you through the quickest way possible of setting up your Tiny Home Theatre Box. If you have any questions regarding your Tiny Home Theatre Box please [B]check the manual [/B] included in your box. For technical questions please visit the website you purchased your device from. For more info or help, please visit our website at [COLOR=selected]www.tinyhtpc.co.nz[/COLOR] where you can find an FAQ and other useful information. Don't forget to \"Like\" us on Facebook for exclusive updates and promotions!"
+msgid "Thank you for supporting [B][COLOR=selected]Tiny Home Theatre PC's[/COLOR][/B].[CR][CR]This one time seen [B]"First Use Help Guide"[/B], will guide you through the quickest way possible of setting up your Tiny Home Theatre Box. If you have any questions regarding your Tiny Home Theatre Box please [B]check the manual [/B] included in your box. For technical questions please visit the website you purchased your device from. For more info or help, please visit our website at [COLOR=selected]www.tinyhtpc.co.nz[/COLOR] where you can find an FAQ and other useful information. Don't forget to \"Like\" us on Facebook for exclusive updates and promotions!"
 msgstr ""
 
 msgctxt "#31422"
@@ -1112,12 +1112,12 @@ msgid "[COLOR=selected][B]Add and Scan your Music to the Library[/B][/COLOR][CR]
 msgstr ""
 
 msgctxt "#31427"
-msgid "You can customize your [B]User Interface[/B] (UI) in order to maximize the unique entertainment experience of your [COLOR=blue][B]Tiny Home Theatre PC[/B][/COLOR][CR]You can set your language/region and character set in the [B]Appearance[/B] section and set the video playback options and subtitles fonts in [B]Video[/B] section. Audio/Video output and power saving options can be configured in [B]System[/B] section.[CR]Also you can further customize your UI, by using some of the many and different settings for all sections that are available in [B]Skin Settings[/B]."
+msgid "You can customize your [B]User Interface[/B] (UI) in order to maximize the unique entertainment experience of [COLOR=blue][B]TinyOS[/B][/COLOR][CR]You can set your language/region and character set in the [B]Appearance[/B] section and set the video playback options and subtitles fonts in [B]Video[/B] section. Audio/Video output and power saving options can be configured in [B]System[/B] section.[CR]Also you can further customize your UI, by using some of the many and different settings for all sections that are available in [B]Skin Settings[/B]."
 msgstr ""
 
 
 msgctxt "#31428"
-msgid "Your [COLOR=blue][B]Tiny Home Theatre PC[/B][/COLOR] has the capibility to download OTA [I](Over The Air)[/I] Updates as they become available. Click [B]"OK"[/B] on your remote to open up TinyOS Config. From here you are able to manage your [B]Network Settings[/B], [B]Schedule Backups[/B] and [B]Check for new Updates[/B].[CR]If the there is an update you will be asked if you want to download it. Click [B]"Yes"[/B] to start the download. After the download is complete the device will automatically reboot to apply the update."
+msgid "The full verision of [COLOR=blue][B]TinyOS[/B][/COLOR] has the capibility to download OTA [I](Over The Air)[/I] Updates as they become available. Click [B]"OK"[/B] on your remote to open up TinyOS Config. From here you are able to manage your [B]Network Settings[/B], [B]Schedule Backups[/B] and [B]Check for new Updates[/B].[CR]If the there is an update you will be asked if you want to download it. Click [B]"Yes"[/B] to start the download. After the download is complete the device will automatically reboot to apply the update."
 msgstr ""
 
 msgctxt "#31430"

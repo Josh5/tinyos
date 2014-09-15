@@ -35,32 +35,31 @@
 						<label>Welcome</label>
 						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
+					  <onclick>RunScript(special://skin/extras/scripts/tinyos.py)</onclick>
 					</item>
 					<item id="2">
-						<label>Screen Calibration</label>
+						<label>Easy First Run Setup Guide</label>
 						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
-					  <onclick>ActivateWindow(screencalibration)</onclick>
+					  <onclick>RunScript(special://skin/extras/scripts/tinyos.py)</onclick>
 				 	</item>
 					<item id="3">
-						<label>WiFi Setup</label>
-						<onclick>PlayerControl(Stop)</onclick>
-					  <onclick>Control.Move(4001,1)</onclick>
-					  <onclick>RunScript(script.linux.nm)</onclick>
-					</item>
-					<item id="4">
 						<label>Add-on Packs</label>
 						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
-					  <onclick>ActivateWindow(videos,plugin://plugin.video.tinywizard)</onclick>
+					  <onclick>RunScript(special://skin/extras/scripts/tinyos.py)</onclick>
 					</item>
-					<item id="5">
-						<label>Video Library</label>
+					<item id="4">
+						<label>Usenet / Torrent support</label>
 						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
-					  <onclick>ActivateWindow(videos,sources://video/)</onclick>
-					  <onclick>Action(down)</onclick>
-					  <onclick condition="!Library.HasContent(Movies) + !Library.HasContent(TVShows)">Action(select)</onclick>
+					  <onclick>RunScript(special://skin/extras/scripts/tinyos.py)</onclick>
+					</item><!--
+					<item id="5">
+						<label>Backup / Update</label>
+						<onclick>PlayerControl(Stop)</onclick>
+					  <onclick>Control.Move(4001,1)</onclick>
+					  <onclick>RunScript(special://skin/extras/scripts/tinyos.py)</onclick>
 					</item>
 					<item id="6">
 						<label>Music Library</label>
@@ -75,11 +74,16 @@
 						<onclick>PlayerControl(Stop)</onclick>
 					  <onclick>Control.Move(4001,1)</onclick>
 					  <onclick>ActivateWindow(Settings)</onclick>
-				 	</item>
+				 	</item>-->
 					<item id="8">
-				    <label>Backup / Update</label>
+						<label>Backup / Update</label>
 						<onclick>PlayerControl(Stop)</onclick>
-		        <onclick>RunScript(special://skin/extras/scripts/tinyos.py)</onclick>
+					  <onclick>RunScript(special://skin/extras/scripts/tinyos.py)</onclick>
+				 	</item>
+					<item id="9">
+						<label>How to Unlock TinyOS</label>
+						<onclick>PlayerControl(Stop)</onclick>
+					  <onclick>RunScript(special://skin/extras/scripts/tinyos.py)</onclick>
 				 	</item>
 				</content>
 			</control>
@@ -108,7 +112,7 @@
 					<posy>50</posy>
 					<width>600</width>
 					<height>430</height>
-					<label>Thank you for purchasing a [B] [COLOR=selected]Tiny Home Theatre Box[/COLOR][/B].[CR][CR]This [B]"Help Guide"[/B], can guide you through the basic settings of your Tiny Home Theatre Box. If you have any questions regarding your Tiny Home Theatre Box please [B]check the manual [/B] included in your box. For technical questions please visit the website you purchased your device from. For more info or help, please visit our website at [COLOR=selected]www.tinyhtpc.co.nz[/COLOR] where you can find an FAQ and other useful information. Don't forget to "Like" us on Facebook for exclusive updates and promotions![CR][CR]TinyHTPC Team</label>
+					<label>Thank you for downloading [B][COLOR=selected]TinyOS[/COLOR][/B].[CR][CR]This [B]DEMO[/B] is free to use and distribute, and should meet the needs of most users. For help with the use of [COLOR=selected]TinyOS[/COLOR] [B]check out our manual[/B] which can be downloaded from [COLOR=selected]http://tinyhtpc.co.nz[/COLOR]. For more info or help, take a look at our forum [COLOR=selected]http://tinyhtpc.co.nz/forum[/COLOR] where you can find tutorials and answers to most FAQ.[CR][CR]Please consider supporting [COLOR=selected]TinyOS[/COLOR] with a donation.[CR][CR]Josh.5</label>
 					<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -145,7 +149,7 @@
 					<posy>420</posy>
 					<width>560</width>
 					<height>80</height>
-					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video presentation of the[B][COLOR=99white] The Tiny Home Theatre PC.[/COLOR][/B]</label>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Click [COLOR=99white]"OK"[/COLOR] to download the full version now. Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video presentation of [B][COLOR=99white]TinyOS.[/COLOR][/B]</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -155,13 +159,13 @@
 				</control>
 			</control>
 
-		  <!-- Calibration -->
+		  <!-- Guide -->
 			<control type="group">
 				<posy>10</posy>
 				<visible>Container(4001).Hasfocus(2)</visible>
 				<include>VisibleHiddenSlideAnimation</include>
 				<control type="label.">
-					<description>Calibration Category Label</description>
+					<description>Guide Category Label</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1075</width>
@@ -174,12 +178,12 @@
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="textbox">
-					<description>Calibration</description>
+					<description>Guide</description>
 					<posx>0</posx>
 					<posy>50</posy>
 					<width>600</width>
 					<height>400</height>
-					<label>In the next step you can adjust the screen to your display devise. Press [B]"OK"[/B] to bring up the [B]Calibration[/B] setup screen and follow the [B]calibration instructions [/B] to adjust the screen so it fits perfectly to your display device.[CR][CR]When you are done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "DOWN" if you want to skip this step.</label>
+					<label>Ever find the basic setup process of Kodi slow and somewhat confusing?[CR]Adding media sources and downloading add-ons can take time. That's why the full version of TinyOS comes with a [B]First Run Setup Guide[/B].[CR][CR][B]Fully setup your Media Centre in minutes![/B][CR]• Restore a previous backup straight away.[CR]• Configure your network connection.[CR]• Setup Kodi's Audio/Video output.[CR]• Download Add-on Packs to get you started.[CR]• Setup your Video/Music Library.[CR]</label>
 					<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -190,7 +194,7 @@
 					<posy>62</posy>
 					<width>565</width>
 					<height>325</height>
-					<texture>windows/help/2.png</texture>
+					<texture>windows/help/guide.png</texture>
 				  <visible>!Player.HasMedia</visible>
 				</control>
 				<control type="button" id="5">
@@ -216,78 +220,7 @@
 					<posy>420</posy>
 					<width>560</width>
 					<height>80</height>
-					<label>[COLOR=blue]NOTICE:[/COLOR] If you need more help, press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step.</label>
-					<font>FontSize_16B</font>
-					<align>justify</align>
-					<textcolor>55white</textcolor>
-					<shadowcolor>99000000</shadowcolor>
-					<include>VisibleHiddenSlideAnimation</include>
-				  <visible>!Player.HasMedia</visible>
-				</control>
-			</control>
-
-		  <!-- WiFi -->
-			<control type="group">
-				<posy>10</posy>
-				<visible>Container(4001).Hasfocus(3)</visible>
-				<include>VisibleHiddenSlideAnimation</include>
-				<control type="label.">
-					<description>WiFi Category Label</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1075</width>
-					<height>50</height>
-					<font>FontSize_42</font>
-					<label>$INFO[Container(4001).ListItem.Label]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<shadowcolor>99000000</shadowcolor>
-				</control>
-				<control type="textbox">
-					<description>WiFi</description>
-					<posx>0</posx>
-					<posy>50</posy>
-					<width>600</width>
-					<height>400</height>
-					<label>In the next step you can setup your network. Click [B]"OK"[/B] on your remote to bring up the [B]WiFi[/B] setup window. Press the [B]"Add"[/B] button, navigate to your [B]WiFi[/B] and enter your [B]WiFi[/B] password if necessary. [B]Wired[/B] connections are configured automatically via DHCP on boot.[CR]There are three colored dots that indicate your Network connectivity. [B][COLOR=red]RED[/COLOR][/B] means no Network connection at all, [B][COLOR=FFFF730F]ORANGE[/COLOR][/B] means that Network is connected but with no Internet access and [B][COLOR=FF03CB00]GREEN[/COLOR][/B] means that both Network connection and Internet access are working properly.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "DOWN" if you want to skip this step.</label>
-					<font>FontSize_22</font>
-					<align>justify</align>
-					<textcolor>99white</textcolor>
-					<shadowcolor>99000000</shadowcolor>
-				</control>
-				<control type="image">
-					<posx>601</posx>
-					<posy>40</posy>
-					<width>605</width>
-					<height>345</height>
-					<texture>windows/help/3.png</texture>
-				  <visible>!Player.HasMedia</visible>
-				</control>
-				<control type="button" id="5">
-			    <include>TopButton</include>
-		      <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=fU3xzfEBy4E,1)</onfocus>
-		      <onfocus>SetFocus(4001)</onfocus>
-				</control>
-				<control type="label.">
-					<posx>1188</posx>
-					<posy>7</posy>
-					<width>1075</width>
-					<height>50</height>
-					<font>FontSize_24</font>
-				  <label>$INFO[Control.Getlabel(70)]</label>
-					<align>right</align>
-					<aligny>center</aligny>
-					<textcolor>grey</textcolor>
-					<shadowcolor>99000000</shadowcolor>
-				</control>
-				<control type="textbox">
-					<description>NOTICE</description>
-					<posx>627</posx>
-					<posy>420</posy>
-					<width>560</width>
-					<height>80</height>
-					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Click [COLOR=99white]"OK"[/COLOR] to download the full version now.[CR]Press [COLOR=99white]"RIGHT"[/COLOR] on your remote to watch a video about this feature.</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -300,10 +233,10 @@
 		  <!-- Addons Packs -->
 			<control type="group">
 				<posy>10</posy>
-				<visible>Container(4001).Hasfocus(4)</visible>
+				<visible>Container(4001).Hasfocus(3)</visible>
 				<include>VisibleHiddenSlideAnimation</include>
 				<control type="label.">
-					<description>Region Addons Category Label</description>
+					<description>Addons Category Label</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1075</width>
@@ -321,22 +254,10 @@
 					<posy>50</posy>
 					<width>600</width>
 					<height>400</height>
-					<label>You are able to install pre-configured Add-on packs that extend the functionality of XBMC. Click [B]"OK"[/B] on your remote to bring up the [B]Add-on Pack[/B] selection and select the [B]Pack[/B] you wish to install.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "DOWN" if you want to skip this step.</label>
-					<font>FontSize_22</font>
+					<label>Not sure what add-ons are right for you? That's fine, just download one of our Add-on Packs. The [B]Add-on Pack Installer[/B] allows you to download a group of pre-configured add-ons so you're up and running in no time at all![CR][CR]What if you have a add-on combination that you wish to share?[CR]Awesome![CR]Using our Add-on Pack creator, you are able to easily create your own Add-on Pack. Then all you have to do is upload it onto the internet (ie. Dropbox), PM us the link in our forum and we'll add it to our repostitory. </label>
+						<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
-					<shadowcolor>99000000</shadowcolor>
-				</control>
-				<control type="textbox">
-					<description>WARNING</description>
-					<posx>0</posx>
-					<posy>265</posy>
-					<width>600</width>
-					<height>80</height>
-					<label>[COLOR=red]WARNING:[/COLOR] Some add-ons contain content that may not be legal in your country. Tiny Home Theatre PC's is not liable for any content or add-ons that are played and installed on this device.</label>
-					<font>FontSize_16B</font>
-					<align>justify</align>
-					<textcolor>77white</textcolor>
 					<shadowcolor>99000000</shadowcolor>
 				</control>
 				<control type="image">
@@ -344,7 +265,7 @@
 					<posy>62</posy>
 					<width>565</width>
 					<height>325</height>
-					<texture>windows/help/4.png</texture>
+					<texture>windows/help/addonpack.png</texture>
 				  <visible>!Player.HasMedia</visible>
 				</control>
 				<control type="button" id="5">
@@ -370,7 +291,7 @@
 					<posy>420</posy>
 					<width>560</width>
 					<height>80</height>
-					<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Click [COLOR=99white]"OK"[/COLOR] to download the full version now.[CR]Press [COLOR=99white]"RIGHT"[/COLOR] on your remote to watch a video about this feature.</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -380,7 +301,220 @@
 				</control>
 			</control>
 
-		  <!-- Video Library -->
+		  <!-- Downloads -->
+			<control type="group">
+				<posy>10</posy>
+				<visible>Container(4001).Hasfocus(4)</visible>
+				<include>VisibleHiddenSlideAnimation</include>
+				<control type="label.">
+					<description>Automatic Downloaders</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_42</font>
+					<label>$INFO[Container(4001).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Automatic Downloaders</description>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>600</width>
+					<height>400</height>
+					<label>[B]          [COLOR=selected]SickBeard[/COLOR] - [COLOR=selected]CouchPotato[/COLOR] - [COLOR=selected]HeadPhones[/COLOR][CR]                          [COLOR=selected]SABnzbd[/COLOR] - [COLOR=selected]Transmission[/COLOR][/B][CR]If you use any of the above, then this is for you![CR][CR]Unlock support for these great Usenet and Torrent applications. Download and organise your media collection while using Kodi to play 1080p video content.[CR][CR]Catering for all experience levels from noob to expert, our selection comes with a "[B]Simple Mode[/B]" option that will allow you to be ready to download in minutes!</label>
+					<font>FontSize_22</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>601</posx>
+					<posy>40</posy>
+					<width>605</width>
+					<height>345</height>
+					<texture>windows/help/downloaders.png</texture>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+				<control type="button" id="5">
+			    <include>TopButton</include>
+		      <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=EqN5jvN_3_U,1)</onfocus>
+		      <onfocus>SetFocus(4001)</onfocus>
+				</control>
+				<control type="label.">
+					<posx>1188</posx>
+					<posy>7</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_24</font>
+				  <label>$INFO[Control.Getlabel(70)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>NOTICE</description>
+					<posx>627</posx>
+					<posy>420</posy>
+					<width>560</width>
+					<height>80</height>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Click [COLOR=99white]"OK"[/COLOR] to download the full version now.[CR]Press [COLOR=99white]"RIGHT"[/COLOR] on your remote to watch a video about this feature.</label>
+					<font>FontSize_16B</font>
+					<align>justify</align>
+					<textcolor>55white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<include>VisibleHiddenSlideAnimation</include>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+			</control>
+
+		  <!-- Backup / Update -->
+			<control type="group">
+				<posy>10</posy>
+				<visible>Container(4001).Hasfocus(8)</visible>
+				<include>VisibleHiddenSlideAnimation</include>
+				<control type="label.">
+					<description>Check for Updates Category Label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_42</font>
+					<label>$INFO[Container(4001).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Setup Backups / Check for Update</description>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>600</width>
+					<height>400</height>
+					<label>The full verision of [COLOR=blue][B]TinyOS[/B][/COLOR] has the capibility to download OTA [I](Over The Air)[/I] Updates as they become available. Open TinyOS Config to manage your [B]Network Settings[/B], [B]Schedule Backups[/B] and [B]Check for new Updates[/B].[CR]Choose to backup TinyOS to an external device or even dropbox. </label>
+					<font>FontSize_22</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>622</posx>
+					<posy>62</posy>
+					<width>565</width>
+					<height>325</height>
+					<texture>windows/help/8.png</texture>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+				<control type="button" id="5">
+			    <include>TopButton</include>
+		      <!--<onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=vtXdygJRM8k,1)</onfocus>-->
+		      <onfocus>SetFocus(4001)</onfocus>
+				</control>
+				<control type="label.">
+					<posx>1188</posx>
+					<posy>7</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_24</font>
+				  <label>$INFO[Control.Getlabel(70)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>NOTICE</description>
+					<posx>627</posx>
+					<posy>420</posy>
+					<width>560</width>
+					<height>80</height>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Click [COLOR=99white]"OK"[/COLOR] to download the full version now.</label>
+					<font>FontSize_16B</font>
+					<align>justify</align>
+					<textcolor>55white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<include>VisibleHiddenSlideAnimation</include>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+			</control>
+
+		  <!-- Unlock -->
+			<control type="group">
+				<posy>10</posy>
+				<visible>Container(4001).Hasfocus(9)</visible>
+				<include>VisibleHiddenSlideAnimation</include>
+				<control type="label.">
+					<description>Unlock TinyOS</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_42</font>
+					<label>$INFO[Container(4001).ListItem.Label]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Unlock TinyOS</description>
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>600</width>
+					<height>400</height>
+					<label>To unlock, simply sign up for a premium membership at our forum, [COLOR=selected]http://tinyhtpc.co.nz/forum[/COLOR] .[CR]Once you have your premium membership, you will need to add this devices' [B]Unique ID[/B] to your profile. To do this:[CR][B]1)[/B]   Open your [COLOR=selected][B]User Control Panel[/B][/COLOR] in the forum.[CR][B]2)[/B]   Click on the [COLOR=selected][B]"Profile"[/B][/COLOR] option.[CR][B]3)[/B]   Scroll to the bottom where you will see a field labled [COLOR=selected][B]"TinyOS Unique ID #"[/B][/COLOR] .[CR]Here you may enter up to 5 Unique ID's for boxes that you own.[CR][CR]You will find your devices' [B]Unique ID[/B] found under:[CR] [B]Programs[/B] > [B]TinyOS Config[/B] > [B]System Update[/B]</label>
+					<font>FontSize_22</font>
+					<align>justify</align>
+					<textcolor>99white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>622</posx>
+					<posy>62</posy>
+					<width>565</width>
+					<height>325</height>
+					<texture>windows/help/unlock.png</texture>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+				<control type="button" id="5">
+			    <include>TopButton</include>
+		      <!--<onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=vtXdygJRM8k,1)</onfocus>-->
+		      <onfocus>SetFocus(4001)</onfocus>
+				</control>
+				<control type="label.">
+					<posx>1188</posx>
+					<posy>7</posy>
+					<width>1075</width>
+					<height>50</height>
+					<font>FontSize_24</font>
+				  <label>$INFO[Control.Getlabel(70)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>grey</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>NOTICE</description>
+					<posx>627</posx>
+					<posy>420</posy>
+					<width>560</width>
+					<height>80</height>
+					<label>[COLOR=blue]NOTICE:[/COLOR] Click [COLOR=99white]"OK"[/COLOR] to download the full version now.</label>
+					<font>FontSize_16B</font>
+					<align>justify</align>
+					<textcolor>55white</textcolor>
+					<shadowcolor>99000000</shadowcolor>
+					<include>VisibleHiddenSlideAnimation</include>
+				  <visible>!Player.HasMedia</visible>
+				</control>
+			</control>
+
+		  <!-- Video Library 
 			<control type="group">
 				<posy>10</posy>
 				<visible>Container(4001).Hasfocus(5)</visible>
@@ -404,7 +538,7 @@
 					<posy>50</posy>
 					<width>600</width>
 					<height>400</height>
-					<label>In the next step you can add and scan your Videos to the Library. Click [B]"OK"[/B] on your remote to bring up the [B]"Add Video source"[/B] dialog. [B]"Browse"[/B] to the folder that you keep your videos and press the [B]"Save"[/B] button. Name this source however you like and press the [B]"Save"[/B] button to bring up the [B]"Set Content"[/B] dialog. This is where you tell XBMC what type of media is in the folder. Click the [B]"OK"[/B] button on your remote until you reach the correct type (e.g TV Shows). Press the [B]"Save"[/B] button when you done and select [B]"Yes"[/B] in the next dialog to start scanning.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "DOWN" if you want to skip this step.</label>
+					<label>In the next step you can add and scan your Videos to the Library. Click [B]"OK"[/B] on your remote to bring up the [B]"Add Video source"[/B] dialog. [B]"Browse"[/B] to the folder that you keep your videos and press the [B]"Save"[/B] button. Name this source however you like and press the [B]"Save"[/B] button to bring up the [B]"Set Content"[/B] dialog. This is where you tell Kodi what type of media is in the folder. Click the [B]"OK"[/B] button on your remote until you reach the correct type (e.g TV Shows). Press the [B]"Save"[/B] button when you done and select [B]"Yes"[/B] in the next dialog to start scanning.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "DOWN" if you want to skip this step.</label>
 					<font>FontSize_22</font>
 					<align>justify</align>
 					<textcolor>99white</textcolor>
@@ -451,7 +585,7 @@
 				</control>
 			</control>
 
-		  <!-- Music Library -->
+		  <!-- Music Library 
 			<control type="group">
 				<posy>10</posy>
 				<visible>Container(4001).Hasfocus(6)</visible>
@@ -520,7 +654,7 @@
 				</control>
 			</control>
 
-		  <!-- Cutomize UI -->
+		  <!-- Cutomize UI 
 			<control type="group">
 				<posy>10</posy>
 				<visible>Container(4001).Hasfocus(7)</visible>
@@ -560,7 +694,7 @@
 				</control>
 				<control type="button" id="5">
 			    <include>TopButton</include>
-		      <!--<onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=vtXdygJRM8k,1)</onfocus>-->
+		      <!--<onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=vtXdygJRM8k,1)</onfocus>
 		      <onfocus>SetFocus(4001)</onfocus>
 				</control>
 				<control type="label.">
@@ -581,7 +715,7 @@
 					<posy>420</posy>
 					<width>560</width>
 					<height>80</height>
-					<!--<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>-->
+					<!--<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -591,7 +725,7 @@
 				</control>
 			</control>
 
-		  <!-- Backup / Update -->
+		  <!-- Backup / Update 
 			<control type="group">
 				<posy>10</posy>
 				<visible>Container(4001).Hasfocus(8)</visible>
@@ -631,7 +765,7 @@
 				</control>
 				<control type="button" id="5">
 			    <include>TopButton</include>
-		      <!--<onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=vtXdygJRM8k,1)</onfocus>-->
+		      <!--<onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=vtXdygJRM8k,1)</onfocus>
 		      <onfocus>SetFocus(4001)</onfocus>
 				</control>
 				<control type="label.">
@@ -652,7 +786,7 @@
 					<posy>420</posy>
 					<width>560</width>
 					<height>80</height>
-					<!--<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>-->
+					<!--<label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=99white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=99white]"RIGHT"[/COLOR] again to stop the video.</label>
 					<font>FontSize_16B</font>
 					<align>justify</align>
 					<textcolor>55white</textcolor>
@@ -703,7 +837,7 @@
 					<aligny>center</aligny>
 					<textcolor>grey</textcolor>
 					<shadowcolor>99000000</shadowcolor>
-				  <label>Step $INFO[Container(4001).CurrentPage] of $INFO[Container(4001).NumPages]</label>
+				  <label>Scroll to end for unlock instructions...</label>
 				</control>
 			  <control type="videowindow">
 					<posx>610</posx>
