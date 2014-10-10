@@ -27,7 +27,7 @@ import fcntl, socket, struct
 ID    = 'script.tiny'
 ADDON = xbmcaddon.Addon(ID)
 OTAORIG = "/usr/share/xbmc/system/ota_version"
-FWHW = "/usr/share/xbmc/system/fw_hw"
+FWHW = "/etc/fw_hw" #FWHW = "/usr/share/xbmc/system/fw_hw"
 #PATCHID = 'os.linux.tiny'
 #PATCH = xbmcaddon.Addon(PATCHID)
 #OTAPATH  = xbmc.translatePath( "special://profile/addon_data/%s/" PATCH )
