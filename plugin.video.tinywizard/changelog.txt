@@ -1,0 +1,8 @@
+[B][COLOR=FF56ADDA]1.1.0 - 09OCT14[/COLOR][/B]
+• Merge updates based on Hub wizard v1.1.8.
+
+[B][COLOR=FF56ADDA]1.0.1[/COLOR][/B]
+• Updated sources to TinyHTPC.
+
+[B][COLOR=FF56ADDA]1.0[/COLOR][/B]
+• Initial Release ported from TLBB regin installer

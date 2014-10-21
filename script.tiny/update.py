@@ -177,7 +177,7 @@ def performUpdate(response, silent):
         while (count < nTries) and (hash != md5):
             count += 1
             try:        
-                download(link, path, dp)
+                download(link,path,version,dp)
                 hash = utils.generateMD5(path)
             except Exception, e:
                 utils.deleteFile(path)
